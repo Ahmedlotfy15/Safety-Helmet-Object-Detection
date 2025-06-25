@@ -1,0 +1,24 @@
+stages:
+
+   prep:
+      cmd: cd notebooks && papermill prep.ipynb ../repro_notebook/prep.ipynb
+      
+      deps:
+        - safety-helmet-1/data.yaml
+
+
+
+   train:
+      cmd: cd notebooks && papermill train.ipynb ../repro_notebook/train.ipynb
+
+      deps: 
+        - safety-helmet-1/data.yaml
+        - yolo11n.pt
+
+
+      outs:
+        - mlruns
+        - runs
+        - safety_helmet_detection_models
+
+        

@@ -1,0 +1,8 @@
+*.pyc
+env/
+mlruns/
+repro_notebook
+safety_helmet_detection_models
+safety-helmet-1
+yolo11n.pt
+dvc.lock
